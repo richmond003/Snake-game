@@ -94,7 +94,7 @@ body {
     
   }     
  
-  /* Media Queries for Tablets and Larger Phones */
+ 
 @media (max-width: 768px) {
   #game-board {
     grid-template-columns: repeat(15, 20px);
@@ -102,29 +102,29 @@ body {
   }
 
   .scores {
-    flex-direction: column; /* Stack scores vertically */
+    flex-direction: column; 
     align-items: center;
-    gap: 10px; /* Add spacing between scores */
+    gap: 10px; 
   }
 
   #score,
   #highScore {
-    font-size: 30px; /* Reduce font size */
+    font-size: 30px; 
   }
 
   #instruction-text {
-    top: 70%; /* Adjust positioning */
-    width: 90%; /* Make text container flexible */
-    font-size: 18px; /* Adjust font size */
+    top: 70%; 
+    width: 90%; 
+    font-size: 18px; 
   }
 
   #logo {
-    max-width: 150px; /* Scale logo */
-    position: relative; /* Allow better layout alignment */
+    max-width: 150px; 
+    position: relative; 
   }
 }
 
-/* Media Queries for Small Phones */
+
 @media (max-width: 480px) {
   #game-board {
     grid-template-columns: repeat(10, 15px);
@@ -133,20 +133,20 @@ body {
 
   #score,
   #highScore {
-    font-size: 20px; /* Further reduce font size */
+    font-size: 20px; 
   }
 
   #instruction-text {
-    font-size: 14px; /* Reduce font size */
-    top: 75%; /* Adjust for smaller screens */
+    font-size: 14px; 
+    top: 75%; 
   }
 
   #logo {
-    max-width: 100px; /* Scale down logo */
-    margin-bottom: 10px; /* Add spacing below logo */
+    max-width: 100px; 
+    margin-bottom: 10px; 
   }
 
   .scores {
-    gap: 5px; /* Reduce spacing between scores */
+    gap: 5px;
   }
 }
