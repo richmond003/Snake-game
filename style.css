@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'VT323', monospace;
+  }
+  
+  body,
+  .snake {
+    background-color:black;
+  }
+  
+  #game-board {
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    margin: 5px;
+  }
+  
+  .game-border-1 {
+    border: lightblue solid 10px;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px #a2d2ff;
+  }
+  
+  .game-border-2 {
+    border: #00b4d8 solid 8px;
+    border-radius: 26px;
+    box-shadow: inset 0 0 0 10px #abb78a;
+  }
+  
+  .game-border-3 {
+    border: #48cae4 solid 30px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 5px l;
+  }
+  
+  #instruction-text {
+    position: absolute;
+    top: 60%;
+    color: #333;
+    width: 300px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 30px;
+    margin: 0;
+    z-index: 3;
+  }
+  
+  .scores {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #score {
+    color: white ;
+  }
+  
+  #score,
+  #highScore {
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 10px 0;
+  }
+  
+  #highScore {
+    color: #d8ddca;
+    display: none;
+  }
+  
+  .game-border-3,
+  #logo {
+    background-color: white;
+  }
+  
+  .snake {
+    border: #48cae4 1px dotted;
+  }
+
+
+  
+  .food {
+    background-color: #dedede;
+    border: #999 5px solid;
+    border-radius: 50%;
+  }
+  
+  #logo {
+    position: absolute;
+     color: white;
+    
+  }     
+ 
+  /* Media Queries for Tablets and Larger Phones */
+@media (max-width: 768px) {
+  #game-board {
+    grid-template-columns: repeat(15, 20px);
+    grid-template-rows: repeat(15, 20px);
+  }
+
+  .scores {
+    flex-direction: column; /* Stack scores vertically */
+    align-items: center;
+    gap: 10px; /* Add spacing between scores */
+  }
+
+  #score,
+  #highScore {
+    font-size: 30px; /* Reduce font size */
+  }
+
+  #instruction-text {
+    top: 70%; /* Adjust positioning */
+    width: 90%; /* Make text container flexible */
+    font-size: 18px; /* Adjust font size */
+  }
+
+  #logo {
+    max-width: 150px; /* Scale logo */
+    position: relative; /* Allow better layout alignment */
+  }
+}
+
+/* Media Queries for Small Phones */
+@media (max-width: 480px) {
+  #game-board {
+    grid-template-columns: repeat(10, 15px);
+    grid-template-rows: repeat(10, 15px);
+  }
+
+  #score,
+  #highScore {
+    font-size: 20px; /* Further reduce font size */
+  }
+
+  #instruction-text {
+    font-size: 14px; /* Reduce font size */
+    top: 75%; /* Adjust for smaller screens */
+  }
+
+  #logo {
+    max-width: 100px; /* Scale down logo */
+    margin-bottom: 10px; /* Add spacing below logo */
+  }
+
+  .scores {
+    gap: 5px; /* Reduce spacing between scores */
+  }
+}
